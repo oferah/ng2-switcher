@@ -1,9 +1,9 @@
 {
-    "name": "angular2-switcher",
-    "displayName": "angular2-switcher",
+    "name": "ng2-switcher",
+    "displayName": "ng2-switcher",
     "description": "Easily navigate to component's files in angular2 project.",
     "version": "0.2.0",
-    "publisher": "infinity1207",
+    "publisher": "tld",
     "icon": "images/logo.png",
     "engines": {
         "vscode": "^1.5.0"
@@ -33,6 +33,10 @@
             {
                 "command": "extension.switchSpec",
                 "title": "Open Corresponding unit test(spec.ts) File"
+            },
+            {
+                "command": "extension.switchCircular",
+                "title": "Open the next Corresponding File (html >> style >> ts >> spec.ts)"
             }
         ],
         "keybindings": [
@@ -55,6 +59,11 @@
                 "command": "extension.switchSpec",
                 "key": "alt+p",
                 "mac": "shift+alt+p"
+            },
+            {
+                "command": "extension.switchCircular",
+                "key": "alt+f7",
+                "mac": "shift+alt+q"
             }
         ],
         "configuration": {
