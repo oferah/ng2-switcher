@@ -477,7 +477,7 @@ export function activate(context: vscode.ExtensionContext) {
                 targetFile.push(fileNameWithoutExtension + ".sass");
                 targetFile.push(fileNameWithoutExtension + ".less");
                 targetFile.push(fileNameWithoutExtension + ".css");
-                executeStyle(targetFile);
+                executeStyle(targetFile, currentFile);
             } else {
                 return;
             }
@@ -489,7 +489,7 @@ export function activate(context: vscode.ExtensionContext) {
     context.subscriptions.push(cmdSwitchTemplate, cmdSwitchStyle, cmdSwitchTS);
 }
 
-function executeStyle(targetFile) {
+function executeStyle(targetFile: string[], currentFile: string) {
 
     var editor = vscode.window.activeTextEditor;
     if (!editor) {
